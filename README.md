@@ -1,5 +1,8 @@
 # Teacher Sandbox Creation and Enrollment Tool
 
+## Author
+Original author: Henry Acevedo https://github.com/HenryAcevedo
+
 ## Overview
 This tool automates the creation of sandbox courses for instructors in Canvas who are enrolled as teachers in any course or section. It also enrolls these instructors into a self-paced course specifically designed for them. The script checks if a sandbox already exists for an instructor before creating a new one, ensuring that no duplicate sandboxes are created.
 
