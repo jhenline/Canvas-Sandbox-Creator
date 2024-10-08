@@ -27,11 +27,9 @@ now = datetime.datetime.now()
 formatted_now = now.strftime("%Y-%m-%d %H:%M")
 print(formatted_now)
 
+# Fetch the 5 most recent terms. These will be used to look for teachers
 def get_current_terms():
-    # Define a list of current terms (probably term IDs)
-    current_terms = [1, 4, 80]
-
-    # Retrieve information about the root account (ID = 1) from a system like Canvas
+    # Retrieve information about the root account
     root = canvas.get_account(1)
 
     # Initialize an empty set to store unique term IDs
@@ -44,13 +42,10 @@ def get_current_terms():
     for term in terms:
         all_terms.add(term.id)
 
-    # Sort the set of term IDs in ascending order
+    # Sort the set of term IDs in ascending order and return the last 5 terms
     all_terms = sorted(all_terms)
-
-    # Print and return a combination of the current terms and the last 15 terms from all_terms
-    # The last 15 terms are obtained by slicing the sorted list (all_terms[-15:])
-    print(current_terms + all_terms[-15:])
-    return (current_terms + all_terms[-15:])
+    print(all_terms[-5:])
+    return all_terms[-5:]
 
 
 def main():
