@@ -1,9 +1,3 @@
-# Purpose: Create sandboxes for anyone in Canvas that is enrolled in any
-# course/section as a teacher. Will check to avoid creating sandboxes if one
-# already exists for that instructor. This also uses that same population
-# to enroll those instructors into a self-paced course we created
-#
-
 import csv
 import datetime
 from tqdm import tqdm
